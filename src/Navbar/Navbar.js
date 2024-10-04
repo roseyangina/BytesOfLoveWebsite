@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
     const navigate = useNavigate();
-    const navRef = useRef(); // Create a ref for the navigation
+    const navRef = useRef(); 
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Manage visibility of nav links
   
 
@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className="header-option-text">Get Involved</div>
         </div>
 
-        {/* Menu button for smaller screens */}
+        {/* Menu and close button for smaller screens */}
       {isMenuOpen ? (
         <button className="nav-btn nav-close-btn" onClick={toggleMenu}>
           <FaTimes />
