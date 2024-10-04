@@ -3,15 +3,21 @@
   src: url('../Fonts/HeartBubbles.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+
 }
 
 .header-container {
   background-color: rgb(255, 211, 244);
-  position: relative;
-  height: 10vh;
-  width: 100%;
-  /* margin-bottom: 7.5vh; */
-  align-content: center;
+  position: sticky; /* Fixed position to keep at the top */
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  height: 10vh; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 1rem; 
+  z-index: 100;
 }
 
 .logo {
@@ -52,6 +58,47 @@
   cursor: pointer;
   color: rgba(156, 71, 150, 255);
 }
+/* -----------responsive fucntionality----------*/
 
-/* Ideas: */
-/*   - A feel like the navbar still looks kind of slapped on there. Maybe adding the ufosc and bytes of love logo in the corners would help */
+.nav-btn {
+  display: none; /* Hide buttons on larger screens */
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  
+  .nav-btn {
+    display: block; /* Show menu/close buttons */
+    position: absolute; 
+    right: 10px; 
+    top:14px; 
+    z-index: 100; 
+    font-size: 1.6rem; 
+    cursor: pointer; 
+  }
+
+  .nav-container .header-option-container {
+    display: none; /* Hidden nav links by default */
+  }
+
+  .responsive_nav .header-option-container {
+    display: block;  /* Show nav links in a column after clicking menu icon */
+    margin: 10px 0;
+    
+  }
+
+   /* Show nav links when menu is clicked open */
+   .responsive_nav.nav-container {
+    display: flex; 
+    flex-direction: column; 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    height: 100%; 
+    width: 50%; 
+    background-color: rgb(255, 211, 244); 
+    z-index: 100; 
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+}

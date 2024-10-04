@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../Home/Home';
 import About from '../About/About';
 import Download from '../Download/Download';
+import GetInvolved from '../GetInvolved/GetInvolved'
 
 function App() {
     const [isMuted, setIsMuted] = useState(false); 
@@ -65,6 +66,7 @@ function App() {
                 <Route path="/" exact element={<Home />} />
                 <Route path="/about" exact element={<About />} />
                 <Route path="/download" exact element={<Download />} />
+                <Route path="/get-involved" exact element={<GetInvolved />} /> 
             </Routes>
         </BrowserRouter>
     );
