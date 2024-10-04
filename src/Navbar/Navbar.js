@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect, useRef, useState } from "react"; // Import useRef and useState
+import { useRef, useState } from "react"; // Import useRef and useState
 import { FaBars, FaTimes } from "react-icons/fa"; // Import FaBars and FaTimes
 import "./Navbar.css";
 
@@ -10,7 +10,7 @@ const Navbar = () => {
   
 
     const toggleMenu = () => {
-      setIsMenuOpen((prev) => !prev); // State of menu bar
+      setIsMenuOpen((prev) => !prev); // Manage when menu opens and closes, flips isMenuOpen
     };
 
   return (
@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="header-option-text">Download</div>
         </div>
         <div className="header-option-container" onClick={() => navigate(`/about`)}>
-          <div className="header-option-text">About</div>
+          <div className="header-option-text">Who We Are</div>
         </div>
         <div className="header-option-container" onClick={() => navigate(`/get-involved`)}>
           <div className="header-option-text">Get Involved</div>
